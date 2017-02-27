@@ -5,7 +5,7 @@
   "author": "deepblue_will",
   "license": "MIT",
   "scripts": {
-    "server": "./node_modules/.bin/webpack-dev-server"
+    "start": "./node_modules/.bin/webpack-dev-server --progress"
   },
   "dependencies": {
     "react": "^15.4.2",

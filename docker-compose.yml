@@ -1,0 +1,23 @@
+version: '2'
+services:
+  datastore:
+    image: busybox
+    volumes:
+      - node_modules:/var/app/node_modules
+
+  web: &app_base
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APP_HOME=/var/app
+    ports:
+     - "8080:8080"
+    volumes:
+      - .:/var/app
+    volumes_from:
+      - datastore
+
+volumes:
+  node_modules:
+    driver: local

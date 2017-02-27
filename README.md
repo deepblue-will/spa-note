@@ -16,12 +16,18 @@ yarn install
 
 or
 
-```
-docker-compose up
+```sh
+chmod 777 ./setup.sh
+./setup.sh
 ```
 
 # Run
+```sh
+yarn start
 ```
-# Run dev server
-yarn run server
+
+or
+
+```sh
+docker-compose up
 ```
